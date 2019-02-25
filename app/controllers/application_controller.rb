@@ -2,6 +2,11 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def hello
-    render html:"hello,world!"
+    render html: "hello, world!"
   end
+
+  def index
+  @users = User.all
+end
+
 end
